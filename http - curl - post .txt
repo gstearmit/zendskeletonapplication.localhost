@@ -1,0 +1,19 @@
+﻿curl -H "Content-Type: application/json" -X POST -d '{"redirect_uri":"/oauth/receivecode","client_id":"testclient","client_secret":"testpass","code":"3d68708344d6f748a38c33a9228673d2f7442b73","grant_type":"authorization_code"}' http://192.168.5.101:2003/oauth
+
+http POST http://192.168.5.101:2003/oauth grant_type=authorization_code code=3d68708344d6f748a38c33a9228673d2f7442b73 redirect_uri=/oauth/receivecode client_id=testclient client_secret=testpass
+
+test / $2y$10$6Az022G24XLC/FmqPX48yu8BF9qsxyIY6I1ZLggtXpkqR0VBBwVs6
+http://192.168.5.101:2003/oauth/authorize?response_type=code&client_id=test&redirect_uri=/oauth/receivecode&state=xyz
+
+
+http://192.168.5.101:2003/oauth/authorize?response_type=token&client_id=testclient&redirect_uri=/oauth/receivecode&state=xyz
+
+http http://192.168.5.101:2003/oauth/resource "Authorization:Bearer d3552c7e3a361b132a10078a3a362d822b262bd3"
+
+
+
+---------------------  Sucess post    -------------------------------------
+http --auth testclient:testpass -f POST http://192.168.5.101:2003/oauth grant_type=client_credentials
+
+---> done 
+http --auth testclient:testpass -f POST http://192.168.5.101:2003/oauth grant_type=client_credentials
