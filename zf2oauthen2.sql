@@ -27,6 +27,13 @@ CREATE TABLE IF NOT EXISTS `oauth_access_tokens` (
 
 -- Dumping data for table zf2oauthen2.oauth_access_tokens: ~0 rows (approximately)
 /*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
+INSERT INTO `oauth_access_tokens` (`access_token`, `client_id`, `user_id`, `expires`, `scope`) VALUES
+	('7ce47ac6e77202f43e40e4854708d99d91648431', 'testclient', NULL, '2015-11-30 10:12:49', NULL),
+	('95f7e55b6b63cbfd3829aecc4f4b751f83bd7062', 'testclient', NULL, '2015-11-30 10:17:25', NULL),
+	('a8d27afe60b2d2112a7446a5f788e51e5cd9d3f5', 'testclient', NULL, '2015-11-30 10:27:35', NULL),
+	('d6a15d36b45886d5bf856a9ceb230b9c4f7f7200', 'testclient', NULL, '2015-11-30 10:14:27', NULL),
+	('e19a3082eefde76b32d0fef9811ba0d9af98a630', 'testclient', NULL, '2015-11-30 10:25:52', NULL),
+	('f664c419e01164027b200f93e57c35b252267ecf', 'testclient', NULL, '2015-11-30 10:23:32', NULL);
 /*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
 
 
@@ -44,6 +51,9 @@ CREATE TABLE IF NOT EXISTS `oauth_authorization_codes` (
 
 -- Dumping data for table zf2oauthen2.oauth_authorization_codes: ~0 rows (approximately)
 /*!40000 ALTER TABLE `oauth_authorization_codes` DISABLE KEYS */;
+INSERT INTO `oauth_authorization_codes` (`authorization_code`, `client_id`, `user_id`, `redirect_uri`, `expires`, `scope`, `id_token`) VALUES
+	('3d68708344d6f748a38c33a9228673d2f7442b73', 'testclient', NULL, '/oauth/receivecode', '2015-11-30 07:25:33', NULL, NULL),
+	('d3552c7e3a361b132a10078a3a362d822b262bd3', 'testclient', NULL, '/oauth/receivecode', '2015-11-30 08:08:07', NULL, NULL);
 /*!40000 ALTER TABLE `oauth_authorization_codes` ENABLE KEYS */;
 
 
