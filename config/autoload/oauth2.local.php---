@@ -1,0 +1,8 @@
+<?php
+return array(
+		'zf-oauth2' => array(
+				'db' => array(
+						'dsn' => 'sqlite:<path to zf-oauth2 module>/data/dbtest.sqlite',
+				),
+		),
+);

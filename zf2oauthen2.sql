@@ -60,6 +60,8 @@ CREATE TABLE IF NOT EXISTS `oauth_clients` (
 
 -- Dumping data for table zf2oauthen2.oauth_clients: ~0 rows (approximately)
 /*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
+INSERT INTO `oauth_clients` (`client_id`, `client_secret`, `redirect_uri`, `grant_types`, `scope`, `user_id`) VALUES
+	('testclient', '$2y$14$f3qml4G2hG6sxM26VMq.geDYbsS089IBtVJ7DlD05BoViS9PFykE2', '/oauth/receivecode', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
 
 
