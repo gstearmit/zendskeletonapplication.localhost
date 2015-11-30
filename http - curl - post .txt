@@ -17,3 +17,5 @@ http --auth testclient:testpass -f POST http://192.168.5.101:2003/oauth grant_ty
 
 ---> done 
 http --auth testclient:testpass -f POST http://192.168.5.101:2003/oauth grant_type=client_credentials
+
+http -f POST http://192.168.5.101:2003/oauth/resource access_token=de3c2566d9e546dc9de3b39cf35d38dbdec202f1
