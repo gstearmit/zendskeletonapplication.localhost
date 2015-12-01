@@ -13,9 +13,9 @@ http http://192.168.5.101:2003/oauth/resource "Authorization:Bearer d3552c7e3a36
 
 
 ---------------------  Sucess post    -------------------------------------
-http --auth testclient:testpass -f POST http://192.168.5.101:2003/oauth grant_type=client_credentials
+http --auth testclient:testpass -f POST http://192.168.0.109:2003/oauth grant_type=client_credentials
 
 ---> done 
-http --auth testclient:testpass -f POST http://192.168.5.101:2003/oauth grant_type=client_credentials
+http --auth testclient:testpass -f POST http://192.168.0.109:2003/oauth grant_type=client_credentials
 
-http -f POST http://192.168.5.101:2003/oauth/resource access_token=de3c2566d9e546dc9de3b39cf35d38dbdec202f1
+http -f POST http://192.168.0.109:2003/oauth/resource access_token=a0f5c51d2f5d444694066b451bfdd5ba719a9f84
