@@ -25,6 +25,20 @@ class Module
     {
         return include __DIR__ . '/config/module.config.php';
     }
+    
+    public function getServiceConfig()
+    {
+    	return array( 
+    			'factories' => array(
+    					'Test\Controller\Test' => function($sm) {
+    						$locator = $sm->getServiceLocator();
+    						$server = $locator->get('ZF\OAuth2\Service\OAuth2Server');
+    						$provider = $locator->get('ZF\OAuth2\Provider\UserId');
+    						return new \Test\Controller\TestController($server, $provider);
+    					}
+    			),
+    	);
+    }
 
     public function getAutoloaderConfig()
     {

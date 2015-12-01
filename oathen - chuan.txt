@@ -1,0 +1,1 @@
+curl -u testclient:testpass http://192.168.0.109:2003/oauth -d 'grant_type=client_credentials'

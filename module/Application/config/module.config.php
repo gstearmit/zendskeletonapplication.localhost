@@ -52,6 +52,19 @@ return array(
                     ),
                 ),
             ),
+        		
+        	'TEST' => array(
+        				'type' => 'Zend\Mvc\Router\Http\Literal',
+        				'options' => array(
+        						'route'    => '/test',
+        						'defaults' => array(
+        								'__NAMESPACE__' => 'Application\Controller',
+        								'controller' => 'Test',
+        								'action'     => 'index',
+        						),
+        				),
+        		),
+        		
         ),
     ),
     'service_manager' => array(
@@ -75,8 +88,10 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+        	'Application\Controller\Test' => 'Application\Controller\TestController',
         ),
+    	
     ),
     'view_manager' => array(
         'display_not_found_reason' => true,
